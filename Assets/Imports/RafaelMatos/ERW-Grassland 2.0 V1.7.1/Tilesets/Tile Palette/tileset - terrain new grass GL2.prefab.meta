@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6840575c10768d4e9edf8044f1db424
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272289
+  packageName: Epic RPG World Collection
+  packageVersion: 1.1
+  assetPath: Assets/RafaelMatos/ERW-Grassland 2.0 V1.7.1/Tilesets/Tile Palette/tileset
+    - terrain new grass GL2.prefab
+  uploadId: 686733

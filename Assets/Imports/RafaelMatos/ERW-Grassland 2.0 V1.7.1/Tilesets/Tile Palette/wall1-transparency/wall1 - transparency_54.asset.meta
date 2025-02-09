@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7919ed4e20cba664489f5bfaf2513d37
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272289
+  packageName: Epic RPG World Collection
+  packageVersion: 1.1
+  assetPath: Assets/RafaelMatos/ERW-Grassland 2.0 V1.7.1/Tilesets/Tile Palette/wall1-transparency/wall1
+    - transparency_54.asset
+  uploadId: 686733
