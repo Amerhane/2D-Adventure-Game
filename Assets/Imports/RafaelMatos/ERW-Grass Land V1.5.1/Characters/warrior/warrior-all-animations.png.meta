@@ -5,7 +5,7 @@ AssetOrigin:
   productId: 272289
   packageName: Epic RPG World Collection
   packageVersion: 1.1
-  assetPath: Assets/RafaelMatos/ERW-Grass Land V1.5.1/Characters/warrior/warrior-all-animations.png
+  assetPath: Assets/Imports/RafaelMatos/ERW-Grass Land V1.5.1/Characters/warrior/warrior-all-animations.png
   uploadId: 686733
 TextureImporter:
   internalIDToNameTable: []

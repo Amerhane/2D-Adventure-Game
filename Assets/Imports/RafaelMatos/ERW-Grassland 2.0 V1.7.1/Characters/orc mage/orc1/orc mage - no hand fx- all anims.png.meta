@@ -1,17 +1,9 @@
 fileFormatVersion: 2
 guid: 976854159a7579d4c885c884da18525d
-AssetOrigin:
-  serializedVersion: 1
-  productId: 272289
-  packageName: Epic RPG World Collection
-  packageVersion: 1.1
-  assetPath: Assets/RafaelMatos/ERW-Grassland 2.0 V1.7.1/Characters/orc mage/orc1/orc
-    mage - no hand fx- all anims.png
-  uploadId: 686733
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -28,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -72,10 +63,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
     resizeAlgorithm: 0
@@ -85,10 +74,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -98,10 +86,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,10 +98,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -124,33 +110,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -167,7 +126,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -189,7 +147,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -211,7 +168,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -233,7 +189,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -255,7 +210,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -277,7 +231,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -299,7 +252,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -321,7 +273,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -343,7 +294,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -365,7 +315,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -387,7 +336,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -409,7 +357,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -431,7 +378,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -453,7 +399,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -475,7 +420,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -497,7 +441,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -519,7 +462,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -541,7 +483,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -563,7 +504,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -585,7 +525,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -607,7 +546,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -629,7 +567,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -651,7 +588,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -673,7 +609,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -695,7 +630,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -717,7 +651,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -739,7 +672,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -761,7 +693,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -783,7 +714,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -805,7 +735,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -827,7 +756,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -849,7 +777,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -871,7 +798,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -893,7 +819,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -915,7 +840,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -937,7 +861,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -959,7 +882,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -981,7 +903,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1003,7 +924,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1025,7 +945,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1047,7 +966,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1069,7 +987,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1091,7 +1008,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1113,7 +1029,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1135,7 +1050,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1157,7 +1071,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1179,7 +1092,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1201,7 +1113,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1223,7 +1134,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1245,7 +1155,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1267,7 +1176,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1289,7 +1197,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1311,7 +1218,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1333,7 +1239,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1355,7 +1260,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1377,7 +1281,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1399,7 +1302,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1421,7 +1323,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1443,7 +1344,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1465,7 +1365,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1487,7 +1386,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1509,7 +1407,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1531,7 +1428,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1553,7 +1449,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1575,7 +1470,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1597,7 +1491,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1619,7 +1512,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1641,7 +1533,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1663,7 +1554,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1685,7 +1575,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1707,7 +1596,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1729,7 +1617,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1751,7 +1638,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1773,7 +1659,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1785,7 +1670,6 @@ TextureImporter:
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -1795,85 +1679,92 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
+      orc mage - no hand fx- all anims_43: 422547535
+      orc mage - no hand fx- all anims_56: -979178488
+      orc mage - no hand fx- all anims_26: -1443239912
+      orc mage - no hand fx- all anims_45: 1216465117
+      orc mage - no hand fx- all anims_6: 1800791074
       orc mage - no hand fx- all anims_0: 1070168497
-      orc mage - no hand fx- all anims_1: 2130137919
+      orc mage - no hand fx- all anims_21: 660613873
+      orc mage - no hand fx- all anims_35: 1164571434
+      orc mage - no hand fx- all anims_30: -473603099
+      orc mage - no hand fx- all anims_29: 650035005
+      orc mage - no hand fx- all anims_73: 397908878
+      orc mage - no hand fx- all anims_50: -2064286702
+      orc mage - no hand fx- all anims_23: -1687098280
+      orc mage - no hand fx- all anims_64: 19827330
+      orc mage - no hand fx- all anims_63: 1022844912
+      orc mage - no hand fx- all anims_17: -1937386211
+      orc mage - no hand fx- all anims_38: -1757325510
+      orc mage - no hand fx- all anims_32: 1891686439
+      orc mage - no hand fx- all anims_24: 581337678
+      orc mage - no hand fx- all anims_72: -1716678864
+      orc mage - no hand fx- all anims_54: 1649561964
+      orc mage - no hand fx- all anims_52: 682998242
+      orc mage - no hand fx- all anims_60: 1848623191
+      orc mage - no hand fx- all anims_25: 171172301
+      orc mage - no hand fx- all anims_16: 437892058
+      orc mage - no hand fx- all anims_19: 191337758
+      orc mage - no hand fx- all anims_40: -1674055171
+      orc mage - no hand fx- all anims_59: 954535671
+      orc mage - no hand fx- all anims_34: 1882212491
+      orc mage - no hand fx- all anims_47: -1256774282
+      orc mage - no hand fx- all anims_31: -2081439786
+      orc mage - no hand fx- all anims_39: 1168838752
+      orc mage - no hand fx- all anims_51: -1268428024
+      orc mage - no hand fx- all anims_49: -1857595755
+      orc mage - no hand fx- all anims_14: -1392031592
+      orc mage - no hand fx- all anims_58: -1041898348
       orc mage - no hand fx- all anims_10: 12873694
+      orc mage - no hand fx- all anims_18: -1197276934
+      orc mage - no hand fx- all anims_69: 1744458603
+      orc mage - no hand fx- all anims_57: -1564479757
+      orc mage - no hand fx- all anims_7: 1902926148
+      orc mage - no hand fx- all anims_15: 828739871
+      orc mage - no hand fx- all anims_48: 2118534774
+      orc mage - no hand fx- all anims_65: -554389579
+      orc mage - no hand fx- all anims_70: -512696130
+      orc mage - no hand fx- all anims_68: -920519360
       orc mage - no hand fx- all anims_11: -906652322
       orc mage - no hand fx- all anims_12: 1825866837
-      orc mage - no hand fx- all anims_13: -1072173811
-      orc mage - no hand fx- all anims_14: -1392031592
-      orc mage - no hand fx- all anims_15: 828739871
-      orc mage - no hand fx- all anims_16: 437892058
-      orc mage - no hand fx- all anims_17: -1937386211
-      orc mage - no hand fx- all anims_18: -1197276934
-      orc mage - no hand fx- all anims_19: 191337758
-      orc mage - no hand fx- all anims_2: -612867281
-      orc mage - no hand fx- all anims_20: 817750570
-      orc mage - no hand fx- all anims_21: 660613873
-      orc mage - no hand fx- all anims_22: -1787619583
-      orc mage - no hand fx- all anims_23: -1687098280
-      orc mage - no hand fx- all anims_24: 581337678
-      orc mage - no hand fx- all anims_25: 171172301
-      orc mage - no hand fx- all anims_26: -1443239912
-      orc mage - no hand fx- all anims_27: 355742102
-      orc mage - no hand fx- all anims_28: -1188792884
-      orc mage - no hand fx- all anims_29: 650035005
-      orc mage - no hand fx- all anims_3: -73172271
-      orc mage - no hand fx- all anims_30: -473603099
-      orc mage - no hand fx- all anims_31: -2081439786
-      orc mage - no hand fx- all anims_32: 1891686439
-      orc mage - no hand fx- all anims_33: -2078263296
-      orc mage - no hand fx- all anims_34: 1882212491
-      orc mage - no hand fx- all anims_35: 1164571434
-      orc mage - no hand fx- all anims_36: -1596643310
-      orc mage - no hand fx- all anims_37: 834552867
-      orc mage - no hand fx- all anims_38: -1757325510
-      orc mage - no hand fx- all anims_39: 1168838752
-      orc mage - no hand fx- all anims_4: -1744471579
-      orc mage - no hand fx- all anims_40: -1674055171
-      orc mage - no hand fx- all anims_41: -955525518
-      orc mage - no hand fx- all anims_42: 2017394527
-      orc mage - no hand fx- all anims_43: 422547535
-      orc mage - no hand fx- all anims_44: -2028097210
-      orc mage - no hand fx- all anims_45: 1216465117
-      orc mage - no hand fx- all anims_46: 346928195
-      orc mage - no hand fx- all anims_47: -1256774282
-      orc mage - no hand fx- all anims_48: 2118534774
-      orc mage - no hand fx- all anims_49: -1857595755
-      orc mage - no hand fx- all anims_5: 1152118642
-      orc mage - no hand fx- all anims_50: -2064286702
-      orc mage - no hand fx- all anims_51: -1268428024
-      orc mage - no hand fx- all anims_52: 682998242
-      orc mage - no hand fx- all anims_53: -1026581759
-      orc mage - no hand fx- all anims_54: 1649561964
       orc mage - no hand fx- all anims_55: -1037754883
-      orc mage - no hand fx- all anims_56: -979178488
-      orc mage - no hand fx- all anims_57: -1564479757
-      orc mage - no hand fx- all anims_58: -1041898348
-      orc mage - no hand fx- all anims_59: 954535671
-      orc mage - no hand fx- all anims_6: 1800791074
-      orc mage - no hand fx- all anims_60: 1848623191
-      orc mage - no hand fx- all anims_61: 2092409031
+      orc mage - no hand fx- all anims_22: -1787619583
+      orc mage - no hand fx- all anims_4: -1744471579
+      orc mage - no hand fx- all anims_27: 355742102
+      orc mage - no hand fx- all anims_42: 2017394527
       orc mage - no hand fx- all anims_62: -1997513563
-      orc mage - no hand fx- all anims_63: 1022844912
-      orc mage - no hand fx- all anims_64: 19827330
-      orc mage - no hand fx- all anims_65: -554389579
-      orc mage - no hand fx- all anims_66: 1877252829
-      orc mage - no hand fx- all anims_67: -1814574858
-      orc mage - no hand fx- all anims_68: -920519360
-      orc mage - no hand fx- all anims_69: 1744458603
-      orc mage - no hand fx- all anims_7: 1902926148
-      orc mage - no hand fx- all anims_70: -512696130
+      orc mage - no hand fx- all anims_2: -612867281
+      orc mage - no hand fx- all anims_36: -1596643310
       orc mage - no hand fx- all anims_71: -1158951948
-      orc mage - no hand fx- all anims_72: -1716678864
-      orc mage - no hand fx- all anims_73: 397908878
-      orc mage - no hand fx- all anims_8: -905953355
+      orc mage - no hand fx- all anims_20: 817750570
       orc mage - no hand fx- all anims_9: -169451201
-  mipmapLimitGroupName: 
+      orc mage - no hand fx- all anims_37: 834552867
+      orc mage - no hand fx- all anims_41: -955525518
+      orc mage - no hand fx- all anims_3: -73172271
+      orc mage - no hand fx- all anims_8: -905953355
+      orc mage - no hand fx- all anims_5: 1152118642
+      orc mage - no hand fx- all anims_1: 2130137919
+      orc mage - no hand fx- all anims_66: 1877252829
+      orc mage - no hand fx- all anims_61: 2092409031
+      orc mage - no hand fx- all anims_46: 346928195
+      orc mage - no hand fx- all anims_28: -1188792884
+      orc mage - no hand fx- all anims_67: -1814574858
+      orc mage - no hand fx- all anims_33: -2078263296
+      orc mage - no hand fx- all anims_13: -1072173811
+      orc mage - no hand fx- all anims_53: -1026581759
+      orc mage - no hand fx- all anims_44: -2028097210
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 272289
+  packageName: Epic RPG World Collection
+  packageVersion: 1.1
+  assetPath: Assets/Imports/RafaelMatos/ERW-Grassland 2.0 V1.7.1/Characters/orc mage/orc1/orc
+    mage - no hand fx- all anims.png
+  uploadId: 686733
