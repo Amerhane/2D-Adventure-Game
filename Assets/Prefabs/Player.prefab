@@ -104,6 +104,10 @@ MonoBehaviour:
         m_CallState: 1
     m_ActionId: ac718d32-9a17-44c2-b8c9-da5fcd041474
     m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5a5a44f0-a75d-49c6-899c-2130f1f5dbf9
+    m_ActionName: 'Gameplay/Attack[/Keyboard/x]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
