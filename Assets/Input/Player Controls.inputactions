@@ -82,8 +82,30 @@
                 },
                 {
                     "name": "",
+                    "id": "0c2e0179-efe7-4c34-81d9-baf9dc07d2ea",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6e50898d-059b-4aa9-b43f-38940198ed12",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c57247f-902c-405b-867c-f3686cc22bf6",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

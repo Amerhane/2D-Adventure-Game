@@ -1,6 +1,11 @@
 internal class AnimationStrings
 {
-    internal static readonly string IsMoving = "isMoving";
-    internal static readonly string AttackTrigger = "attack";
-    internal static readonly string CanMove = "canMove";
+    //Player and Enemy
+    internal static readonly string isMoving = "isMoving";
+    internal static readonly string attackTrigger = "attack";
+    internal static readonly string canMove = "canMove";
+    internal static readonly string isAlive = "isAlive";
+
+    //Coin Pick Up
+    internal static readonly string pickUpTrigger = "pickedUp";
 }

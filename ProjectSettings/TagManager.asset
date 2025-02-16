@@ -3,19 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - UiController
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Obsticle Ground
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Detect Player
+  - Attack Player
+  - Attack Enemy
   - 
   - 
   - 

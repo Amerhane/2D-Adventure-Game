@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         private set
         {
             _isMoving = value;
-            _animator.SetBool(AnimationStrings.IsMoving, value);
+            _animator.SetBool(AnimationStrings.isMoving, value);
         }
     }
 
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-            return _animator.GetBool(AnimationStrings.CanMove);
+            return _animator.GetBool(AnimationStrings.canMove);
         }
     }
 
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            _animator.SetTrigger(AnimationStrings.AttackTrigger);
+            _animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
 }

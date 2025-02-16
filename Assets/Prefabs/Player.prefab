@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2999045949655837298}
   - component: {fileID: 2182846123212358371}
   - component: {fileID: 670962010527454070}
-  m_Layer: 0
+  - component: {fileID: 3704771631467929604}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -98,8 +99,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0, y: 0.21628761}
-  m_Size: {x: 0.23823637, y: 0.51862144}
+  m_Offset: {x: 0, y: 0.16378379}
+  m_Size: {x: 0.23823637, y: 0.4136138}
   m_Direction: 0
 --- !u!114 &2182846123212358371
 MonoBehaviour:
@@ -175,7 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485c001acecf1e9489ef7b454a5545c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2.5
+  _moveSpeed: 3
+--- !u!114 &3704771631467929604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516338668340453464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5f1fba035e994f9a30ae2dfa3133a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 5
 --- !u!1 &8271055102612501467
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6114273329225553701}
   - component: {fileID: 1142759826744161417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: char-shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,9 +285,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3353590110373678823}
     m_Modifications:
+    - target: {fileID: 2421371622960678289, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615876533960716123, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311411393842153871, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5865690466472679962, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
       propertyPath: m_Name
       value: Warrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865690466472679962, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5865690466472679964, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
       propertyPath: m_SortingLayer
