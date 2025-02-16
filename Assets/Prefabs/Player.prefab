@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3353590110373678823}
   - component: {fileID: 4521343015104439275}
+  - component: {fileID: 2999045949655837298}
   - component: {fileID: 2182846123212358371}
-  - component: {fileID: 2007624545060276808}
+  - component: {fileID: 670962010527454070}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6273015220292492021}
   - {fileID: 6114273329225553701}
@@ -62,7 +63,44 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &2999045949655837298
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516338668340453464}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0, y: 0.21628761}
+  m_Size: {x: 0.23823637, y: 0.51862144}
+  m_Direction: 0
 --- !u!114 &2182846123212358371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,9 +128,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2007624545060276808}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Move
+      - m_Target: {fileID: 670962010527454070}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -105,7 +143,19 @@ MonoBehaviour:
     m_ActionId: ac718d32-9a17-44c2-b8c9-da5fcd041474
     m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 670962010527454070}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_ActionId: 5a5a44f0-a75d-49c6-899c-2130f1f5dbf9
     m_ActionName: 'Gameplay/Attack[/Keyboard/x]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -113,7 +163,7 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2007624545060276808
+--- !u!114 &670962010527454070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,10 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516338668340453464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d0e83596092f64dbb0c30187e8d603, type: 3}
+  m_Script: {fileID: 11500000, guid: 485c001acecf1e9489ef7b454a5545c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1.5
+  _moveSpeed: 2.5
 --- !u!1 &8271055102612501467
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,8 +249,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -210222299
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7d2cdb3ab383af34ea6099f9b14b7636, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -224,6 +274,14 @@ PrefabInstance:
     - target: {fileID: 5865690466472679962, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
       propertyPath: m_Name
       value: Warrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865690466472679964, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865690466472679964, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -210222299
       objectReference: {fileID: 0}
     - target: {fileID: 5865690466472679967, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}
       propertyPath: m_LocalPosition.x
