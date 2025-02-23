@@ -1,18 +1,26 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
+    public UnityEvent<Vector2> damageableHit;
+    public UnityEvent onHitUI;
+
     [SerializeField]
-    private byte _maxHealth;
-    private byte _health;
+    private float _maxHealth;
+    private float _health;
     private bool _isAlive;
     private bool _isInvincible;
+    private float _healthAsPercent;
 
+    [SerializeField]
+    private GameObject _healthBar;
     private Animator _animator;
     private float _timeSinceHit = 0;
-    private float _invincibilityTime = 0.25f;
+    [SerializeField]
+    private float _invincibilityTime = 1f;
 
-    public byte MaxHealth
+    public float MaxHealth
     {
         get
         {
@@ -24,7 +32,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    public byte Health
+    public float Health
     {
         get
         {
@@ -62,6 +70,7 @@ public class Damageable : MonoBehaviour
     {
         _health = _maxHealth;
         _isAlive = true;
+        _healthAsPercent = 1f;
     }
 
     public void Hit(Vector2 knockback)
@@ -69,7 +78,11 @@ public class Damageable : MonoBehaviour
         if (IsAlive && !_isInvincible)
         {
             Health--;
+            _healthAsPercent = _health / _maxHealth;
+            UpdateHealthBar();
             _isInvincible = true;
+            _animator.SetTrigger(AnimationStrings.hitTrigger);
+            damageableHit?.Invoke(knockback);
         }
     }
 
@@ -85,5 +98,10 @@ public class Damageable : MonoBehaviour
 
             _timeSinceHit += Time.deltaTime;
         }
+    }
+
+    private void UpdateHealthBar()
+    {
+        _healthBar.transform.localScale = new Vector3(_healthAsPercent, 1f, 1f);
     }
 }

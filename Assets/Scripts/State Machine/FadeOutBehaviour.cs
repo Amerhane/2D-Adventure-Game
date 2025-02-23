@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class FadeOutBehaviour : StateMachineBehaviour
 {
-    [SerializeField, Min(0f)]
-    private float _fadeTime = 0.5f;
+    [SerializeField, Min(1f)]
+    private float _fadeTime = 1f;
     private float _timeElapsed;
     private SpriteRenderer _spriteRend;
-    private GameObject _objectToRemove;
     private Color _startColor;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -15,7 +14,6 @@ public class FadeOutBehaviour : StateMachineBehaviour
     {
         _timeElapsed = 0f;
         _spriteRend = animator.GetComponent<SpriteRenderer>();
-        _objectToRemove = animator.GetComponentInParent<GameObject>();
         _startColor = _spriteRend.color;
     }
 
@@ -30,7 +28,7 @@ public class FadeOutBehaviour : StateMachineBehaviour
 
         if (_timeElapsed > _fadeTime)
         {
-            Destroy(_objectToRemove);
+            animator.GetComponentInParent<EnemyController>().Kill(); //Since only enemies use this.
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,7 +13,7 @@ public class EnemyController : MonoBehaviour
     private bool _isMoving = false;
     private bool _isFacingRight = true;
     private Vector2 _moveDirection;
-
+    
     public Animator Animator
     {
         get
@@ -93,6 +94,14 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public bool LockVelocity
+    {
+        get
+        {
+            return _animator.GetBool(AnimationStrings.lockVelocity);
+        }
+    }
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -106,7 +115,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (_detection.Target != null)
+        if (_detection.Target != null && ShouldMoveToPlayer())
         {
             MoveToPlayer();
         }
@@ -118,14 +127,27 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocity = new Vector2(MoveDirection.x * CurrentMoveSpeed,
-            MoveDirection.y * CurrentMoveSpeed);
+        if (!LockVelocity)
+        {
+            _rigidbody.linearVelocity = new Vector2(MoveDirection.x * CurrentMoveSpeed,
+                MoveDirection.y * CurrentMoveSpeed);
+        }
+    }
+
+    private bool ShouldMoveToPlayer()
+    {
+        if (Vector2.Distance(_detection.Target.transform.position, this.transform.position) >= 1f)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     private void MoveToPlayer()
     {
         Vector2 direction = (_detection.TargetPostion -
-            this.gameObject.transform.position).normalized;
+                                this.gameObject.transform.position).normalized;
         MoveDirection = direction;
         IsMoving = true;
         SetFacingDirection(direction);
@@ -141,5 +163,25 @@ public class EnemyController : MonoBehaviour
         {
             IsFacingRight = false;
         }
+    }
+
+    public void OnHit(Vector2 knockback)
+    {
+        if(IsFacingRight)
+        {
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x - knockback.x,
+                                            _rigidbody.linearVelocity.y + knockback.y);
+        }
+        else
+        {
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x + knockback.x,
+                                            _rigidbody.linearVelocity.y + knockback.y);
+        }
+    }
+
+    public void Kill()
+    {
+        GetComponent<DropItemOnDeath>().DropOnDeath();
+        Destroy(this.gameObject);
     }
 }

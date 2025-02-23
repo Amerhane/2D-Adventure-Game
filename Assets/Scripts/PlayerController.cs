@@ -74,6 +74,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool LockVelocity
+    {
+        get
+        {
+            return _animator.GetBool(AnimationStrings.lockVelocity);
+        }
+    }
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -82,9 +90,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocity = 
-            new Vector2(_moveInput.x * CurrentMoveSpeed, 
-                _moveInput.y * CurrentMoveSpeed);
+        if (!LockVelocity)
+        {
+            _rigidbody.linearVelocity = new Vector2(_moveInput.x * CurrentMoveSpeed,
+                                            _moveInput.y * CurrentMoveSpeed);
+        }
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -93,7 +104,8 @@ public class PlayerController : MonoBehaviour
         
         IsMoving = _moveInput != Vector2.zero;
 
-        SetFacingDirection(_moveInput);
+        if(_animator.GetBool(AnimationStrings.isAlive)) //fix changing directions on death?
+            SetFacingDirection(_moveInput);
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -113,6 +125,20 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             _animator.SetTrigger(AnimationStrings.attackTrigger);
+        }
+    }
+
+    public void OnHit(Vector2 knockback)
+    {
+        if (IsFacingRight)
+        {
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x - knockback.x,
+                                            _rigidbody.linearVelocity.y + knockback.y);
+        }
+        else
+        {
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x + knockback.x,
+                                            _rigidbody.linearVelocity.y + knockback.y);
         }
     }
 }
