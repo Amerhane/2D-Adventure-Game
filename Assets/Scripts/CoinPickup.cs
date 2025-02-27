@@ -5,11 +5,13 @@ public class CoinPickup : MonoBehaviour
 {
     public UnityEvent CollectCoin;
 
-    private Animator _animator;
+    private Animator animator;
+
+    private bool pickedUp = false;
 
     private void Awake()
     {
-        _animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
@@ -26,8 +28,12 @@ public class CoinPickup : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            _animator.SetTrigger(AnimationStrings.pickUpTrigger);
-            CollectCoin.Invoke();
+            if (!pickedUp)
+            {
+                pickedUp = true;
+                animator.SetTrigger(AnimationStrings.pickUpTrigger);
+                CollectCoin.Invoke();
+            }
         }
     }
 }

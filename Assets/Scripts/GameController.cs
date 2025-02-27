@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private int _coins;
+    private int coins;
 
-    public int Coins
+    private void Start()
     {
-        get
-        {
-            return _coins;
-        }
-        private set
-        {
-            _coins += value;
-        }
+        coins = 0;
     }
 
     public void PickUpCoin()
     {
-        Coins++;
+        AddCoin();
+    }
+
+    public int GetCoins()
+    {
+        return coins;
+    }
+
+    private void AddCoin()
+    {
+        coins++;
     }
 }

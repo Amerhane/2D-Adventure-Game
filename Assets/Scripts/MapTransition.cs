@@ -4,15 +4,15 @@ using UnityEngine;
 public class MapTransition : MonoBehaviour
 {
     [SerializeField]
-    private BoxCollider2D mapBoundary; //map to tranfer to.
+    protected BoxCollider2D mapBoundary; //map to tranfer to.
     [SerializeField]
-    private GameObject unloadMap; //map to unload.
+    protected GameObject unloadMap; //map to unload.
     [SerializeField]
-    private GameObject loadMap; //map to load;
+    protected GameObject loadMap; //map to load;
     [SerializeField]
-    private Transform playerSpawnPosition; //where to put player on new map.
+    protected Transform playerSpawnPosition; //where to put player on new map.
 
-    private CinemachineConfiner2D confiner;
+    protected CinemachineConfiner2D confiner;
 
     private void Awake()
     {

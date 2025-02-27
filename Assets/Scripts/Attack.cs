@@ -3,7 +3,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 _knockback = Vector2.zero;
+    private Vector2 knockback = Vector2.zero;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,7 +11,7 @@ public class Attack : MonoBehaviour
 
         if (damageable != null)
         {
-            damageable.Hit(_knockback);
+            damageable.Hit(knockback);
         }
     }
 }

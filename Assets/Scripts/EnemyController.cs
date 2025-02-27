@@ -115,7 +115,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (_detection.Target != null && ShouldMoveToPlayer())
+        if (_detection.GetTarget() != null && ShouldMoveToPlayer())
         {
             MoveToPlayer();
         }
@@ -136,7 +136,7 @@ public class EnemyController : MonoBehaviour
 
     private bool ShouldMoveToPlayer()
     {
-        if (Vector2.Distance(_detection.Target.transform.position, this.transform.position) >= 1f)
+        if (Vector2.Distance(_detection.GetTarget().transform.position, this.transform.position) >= 1f)
         {
             return true;
         }
@@ -182,6 +182,7 @@ public class EnemyController : MonoBehaviour
     public void Kill()
     {
         GetComponent<DropItemOnDeath>().DropOnDeath();
+
         Destroy(this.gameObject);
     }
 }

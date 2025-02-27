@@ -7,101 +7,75 @@ public class Damageable : MonoBehaviour
     public UnityEvent onHitUI;
 
     [SerializeField]
-    private float _maxHealth;
-    private float _health;
-    private bool _isAlive;
-    private bool _isInvincible;
-    private float _healthAsPercent;
+    private float maxHealth;
+    private float health;
+    private bool isAlive;
+    private bool isInvincible;
+    private float healthAsPercent;
 
     [SerializeField]
-    private GameObject _healthBar;
-    private Animator _animator;
-    private float _timeSinceHit = 0;
+    private GameObject healthBar;
+    private Animator animator;
+    private float timeSinceHit = 0;
     [SerializeField]
-    private float _invincibilityTime = 1f;
-
-    public float MaxHealth
-    {
-        get
-        {
-            return _maxHealth;
-        }
-        set
-        {
-            _maxHealth = value;
-        }
-    }
-
-    public float Health
-    {
-        get
-        {
-            return _health;
-        }
-        set
-        {
-            _health = value;
-            if (_health <= 0)
-            {
-                IsAlive = false;
-            }
-        }
-    }
-
-    public bool IsAlive
-    {
-        get
-        {
-            return _isAlive;
-        }
-        set
-        {
-            _isAlive = value;
-            _animator.SetBool(AnimationStrings.isAlive, value);
-        }
-    }
+    private float invincibilityTime = 1f;
 
     private void Awake()
     {
-        _animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        _health = _maxHealth;
-        _isAlive = true;
-        _healthAsPercent = 1f;
+        health = maxHealth;
+        isAlive = true;
+        healthAsPercent = 1f;
     }
 
     public void Hit(Vector2 knockback)
     {
-        if (IsAlive && !_isInvincible)
+        if (isAlive && !isInvincible)
         {
-            Health--;
-            _healthAsPercent = _health / _maxHealth;
+            TakeDamage();
+            healthAsPercent = health / maxHealth;
             UpdateHealthBar();
-            _isInvincible = true;
-            _animator.SetTrigger(AnimationStrings.hitTrigger);
+            isInvincible = true;
+            animator.SetTrigger(AnimationStrings.hitTrigger);
             damageableHit?.Invoke(knockback);
         }
     }
 
     public void Update()
     {
-        if (_isInvincible)
+        if (isInvincible)
         {
-            if (_timeSinceHit > _invincibilityTime)
+            if (timeSinceHit > invincibilityTime)
             {
-                _isInvincible = false;
-                _timeSinceHit = 0;
+                isInvincible = false;
+                timeSinceHit = 0;
             }
 
-            _timeSinceHit += Time.deltaTime;
+            timeSinceHit += Time.deltaTime;
         }
+    }
+
+    private void TakeDamage()
+    {
+        health--;
+        if (health <= 0)
+        {
+            Kill();
+        }
+    }
+
+    private void Kill()
+    {
+        isAlive = false;
+        animator.SetBool(AnimationStrings.isAlive, false);
     }
 
     private void UpdateHealthBar()
     {
-        _healthBar.transform.localScale = new Vector3(_healthAsPercent, 1f, 1f);
+        healthBar.transform.localScale = new Vector3(healthAsPercent, 1f, 1f);
     }
 }

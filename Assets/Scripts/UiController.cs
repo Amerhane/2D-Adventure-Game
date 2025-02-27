@@ -4,18 +4,18 @@ using UnityEngine;
 public class UiController : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text _coinText;
+    private TMP_Text coinText;
 
-    private GameController _gameController;
+    private GameController gameController;
 
     private void Start()
     {
-        _gameController = 
+        gameController = 
             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     public void UpdateCoinsCollected()
     {
-        _coinText.text = _gameController.Coins.ToString();
+        coinText.text = gameController.GetCoins().ToString();
     }
 }

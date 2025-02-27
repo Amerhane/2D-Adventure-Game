@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-    private GameObject _target;
-    private Vector3 _targetPosition;
+    private GameObject target;
+    private Vector3 targetPosition;
 
     public GameObject Target
     {
         get
         {
-            return _target;
+            return target;
         }
         private set
         {
-            _target = value;
+            target = value;
         }
     }
 
@@ -21,24 +21,24 @@ public class DetectionZone : MonoBehaviour
     {
         get
         {
-            return _targetPosition;
+            return targetPosition;
         }
         private set
         {
-            _targetPosition = value;
+            targetPosition = value;
         }
     }
 
     private void Start()
     {
-        Target = null;
+        target = null;
     }
 
     private void Update()
     {
-        if (Target != null)
+        if (target != null)
         {
-            TargetPostion = Target.transform.position;
+            targetPosition = target.transform.position;
         }
     }
 
@@ -46,7 +46,7 @@ public class DetectionZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Target = collision.gameObject;
+            SetTarget(collision.gameObject);
         }
     }
 
@@ -54,7 +54,17 @@ public class DetectionZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Target = null;
+            target = null;
         }
+    }
+
+    public GameObject GetTarget()
+    {
+        return target;
+    }
+
+    private void SetTarget(GameObject target)
+    {
+        this.target = target;
     }
 }
