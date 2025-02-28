@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92879172241ebbd4fbbed4b55732b128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackCooldown: 5
+  attackCooldown: 3
 --- !u!1 &4207711407665628694
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4a7fe271c327548808d4dbe897e082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2.5
+  moveSpeed: 3
 --- !u!114 &2438404399922599704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,9 +386,9 @@ MonoBehaviour:
   onHitUI:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 2
-  _healthBar: {fileID: 635801698753786793}
-  _invincibilityTime: 1
+  maxHealth: 2
+  healthBar: {fileID: 635801698753786793}
+  invincibilityTime: 1
 --- !u!114 &3481810319349471654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743700fac69aa2f45a77b5b71931f377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knockback: {x: 3, y: 0}
+  knockback: {x: 3, y: 0}
 --- !u!1 &7632060981255777075
 GameObject:
   m_ObjectHideFlags: 0

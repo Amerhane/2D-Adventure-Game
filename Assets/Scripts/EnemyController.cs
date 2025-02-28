@@ -1,142 +1,53 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyController : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    private DetectionZone _detection;
-    private Animator _animator;
+    private Rigidbody2D rigidBody;
+    private DetectionZone detection;
+    private Animator animator;
 
     [SerializeField, Min(1)]
-    private float _moveSpeed;
-    private bool _isMoving = false;
-    private bool _isFacingRight = true;
-    private Vector2 _moveDirection;
-    
-    public Animator Animator
-    {
-        get
-        {
-            return _animator;
-        }
-    }
-
-    public float CurrentMoveSpeed
-    {
-        get
-        {
-            if (CanMove)
-            {
-                if (IsMoving)
-                {
-                    return _moveSpeed;
-                }
-                else
-                {
-                    return 0f;
-                }
-            }
-            else
-            {
-                return 0f;
-            }
-        }
-    }
-
-    public bool IsMoving
-    {
-        get
-        {
-            return _isMoving;
-        }
-        private set
-        {
-            _isMoving = value;
-            _animator.SetBool(AnimationStrings.isMoving, value);
-        }
-    }
-
-    public bool IsFacingRight
-    {
-        get
-        {
-            return _isFacingRight;
-        }
-        private set
-        {
-            if (_isFacingRight != value)
-            {
-                transform.localScale *= new Vector2(-1, 1);
-            }
-
-            _isFacingRight = value;
-        }
-    }
-
-    public bool CanMove
-    {
-        get
-        {
-            return _animator.GetBool(AnimationStrings.canMove);
-        }
-    }
-
-    public Vector2 MoveDirection
-    {
-        get
-        {
-            return _moveDirection;
-        }
-        private set
-        {
-            _moveDirection = value;
-        }
-    }
-
-    public bool LockVelocity
-    {
-        get
-        {
-            return _animator.GetBool(AnimationStrings.lockVelocity);
-        }
-    }
+    private float moveSpeed;
+    private bool isMoving = false;
+    private bool isFacingRight = true;
+    private Vector2 moveDirection;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _animator = GetComponentInChildren<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        _detection = GetComponentInChildren<DetectionZone>();
+        detection = GetComponentInChildren<DetectionZone>();
     }
 
     private void Update()
     {
-        if (_detection.GetTarget() != null && ShouldMoveToPlayer())
+        if (detection.GetTarget() != null && ShouldMoveToPlayer())
         {
             MoveToPlayer();
         }
         else
         {
-            IsMoving = false;
+            SetIsMoving(false);
         }
     }
 
     private void FixedUpdate()
     {
-        if (!LockVelocity)
+        if (!LockVelocity())
         {
-            _rigidbody.linearVelocity = new Vector2(MoveDirection.x * CurrentMoveSpeed,
-                MoveDirection.y * CurrentMoveSpeed);
+            rigidBody.linearVelocity = new Vector2(moveDirection.x * GetCurrentMoveSpeed(),
+                moveDirection.y * GetCurrentMoveSpeed());
         }
     }
 
     private bool ShouldMoveToPlayer()
     {
-        if (Vector2.Distance(_detection.GetTarget().transform.position, this.transform.position) >= 1f)
+        if (Vector2.Distance(detection.GetTarget().transform.position, this.transform.position) >= 1f)
         {
             return true;
         }
@@ -146,36 +57,36 @@ public class EnemyController : MonoBehaviour
 
     private void MoveToPlayer()
     {
-        Vector2 direction = (_detection.TargetPostion -
+        Vector2 direction = (detection.GetTargetPosition() -
                                 this.gameObject.transform.position).normalized;
-        MoveDirection = direction;
-        IsMoving = true;
+        moveDirection = direction;
+        SetIsMoving(true);
         SetFacingDirection(direction);
     }
 
     private void SetFacingDirection(Vector2 movingDirection)
     {
-        if (movingDirection.x > 0f && !IsFacingRight)
+        if (movingDirection.x > 0f && !isFacingRight)
         {
-            IsFacingRight = true;
+            SetIsFacingRight(true);
         }
-        else if (movingDirection.x < 0f && IsFacingRight)
+        else if (movingDirection.x < 0f && isFacingRight)
         {
-            IsFacingRight = false;
+            SetIsFacingRight(false);
         }
     }
 
     public void OnHit(Vector2 knockback)
     {
-        if(IsFacingRight)
+        if(isFacingRight)
         {
-            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x - knockback.x,
-                                            _rigidbody.linearVelocity.y + knockback.y);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x - knockback.x,
+                                            rigidBody.linearVelocity.y + knockback.y);
         }
         else
         {
-            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x + knockback.x,
-                                            _rigidbody.linearVelocity.y + knockback.y);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x + knockback.x,
+                                            rigidBody.linearVelocity.y + knockback.y);
         }
     }
 
@@ -184,5 +95,54 @@ public class EnemyController : MonoBehaviour
         GetComponent<DropItemOnDeath>().DropOnDeath();
 
         Destroy(this.gameObject);
+    }
+
+    public Animator GetAnimator()
+    {
+        return animator;
+    }
+
+    private float GetCurrentMoveSpeed()
+    {
+        if (CanMove())
+        {
+            if (isMoving)
+            {
+                return moveSpeed;
+            }
+            else
+            {
+                return 0f;
+            }
+        }
+        else
+        {
+            return 0f;
+        }
+    }
+
+    private void SetIsMoving(bool value)
+    {
+        isMoving = value;
+        animator.SetBool(AnimationStrings.isMoving, value);
+    }
+
+    private void SetIsFacingRight(bool value)
+    {
+        if (isFacingRight != value)
+        {
+            transform.localScale *= new Vector2(-1, 1);
+        }
+        isFacingRight = value;
+    }
+
+    private bool CanMove()
+    {
+        return animator.GetBool(AnimationStrings.canMove);
+    }
+
+    private bool LockVelocity()
+    {
+        return animator.GetBool(AnimationStrings.lockVelocity);
     }
 }

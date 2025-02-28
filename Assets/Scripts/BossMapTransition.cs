@@ -1,7 +1,10 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class BossMapTransition : MapTransition
 {
+    [SerializeField]
+    private GameObject boss;
     [SerializeField]
     private GameObject instructionsPanel;
     private GameController gameController;
@@ -9,6 +12,7 @@ public class BossMapTransition : MapTransition
     private void Start()
     {
         instructionsPanel.SetActive(false);
+        boss.SetActive(false);
         gameController = FindFirstObjectByType<GameController>();
     }
 
@@ -16,13 +20,14 @@ public class BossMapTransition : MapTransition
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (gameController.GetCoins() >= 10)
+            if (gameController.GetCoins() >= 0)
             {
-                loadMap.gameObject.SetActive(true);
-                confiner.BoundingShape2D = mapBoundary;
+                loadMap.SetActive(true);
                 collision.gameObject.transform.position =
                     playerSpawnPosition.position;
-                unloadMap.gameObject.SetActive(false);
+                confiner.BoundingShape2D = mapBoundary;
+                unloadMap.SetActive(false);
+                boss.SetActive(true);
             }
             else
             {

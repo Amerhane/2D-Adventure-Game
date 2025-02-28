@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485c001acecf1e9489ef7b454a5545c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 3
+  moveSpeed: 4
 --- !u!114 &3704771631467929604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,9 +241,9 @@ MonoBehaviour:
   onHitUI:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 5
-  _healthBar: {fileID: 7026242131268748885}
-  _invincibilityTime: 1
+  maxHealth: 5
+  healthBar: {fileID: 7026242131268748885}
+  invincibilityTime: 1
 --- !u!1 &1746583949871807333
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743700fac69aa2f45a77b5b71931f377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knockback: {x: 3, y: 0}
+  knockback: {x: 3, y: 0}
 --- !u!4 &6273015220292492021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5865690466472679967, guid: 11414cde4596b9a4a95b9944ea8ec87a, type: 3}

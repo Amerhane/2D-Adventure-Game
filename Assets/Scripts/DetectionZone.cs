@@ -5,33 +5,10 @@ public class DetectionZone : MonoBehaviour
     private GameObject target;
     private Vector3 targetPosition;
 
-    public GameObject Target
-    {
-        get
-        {
-            return target;
-        }
-        private set
-        {
-            target = value;
-        }
-    }
-
-    public Vector3 TargetPostion
-    {
-        get
-        {
-            return targetPosition;
-        }
-        private set
-        {
-            targetPosition = value;
-        }
-    }
-
     private void Start()
     {
         target = null;
+        targetPosition = Vector3.zero;
     }
 
     private void Update()
@@ -66,5 +43,10 @@ public class DetectionZone : MonoBehaviour
     private void SetTarget(GameObject target)
     {
         this.target = target;
+    }
+
+    public Vector3 GetTargetPosition()
+    {
+        return target.transform.position;
     }
 }

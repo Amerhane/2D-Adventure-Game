@@ -4,119 +4,52 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 _moveInput;
-    private Rigidbody2D _rigidbody;
+    private Vector2 moveInput;
+    private Rigidbody2D rigidBody;
 
     [SerializeField, Min (1)]
-    private float _moveSpeed;
-    private bool _isMoving = false;
-    private bool _isFacingRight = true;
+    private float moveSpeed;
+    private bool isMoving = false;
+    private bool isFacingRight = true;
 
-    private Animator _animator;
-
-    public float CurrentMoveSpeed
-    {
-        get
-        {
-            if (CanMove)
-            {
-                if (IsMoving)
-                {
-                    return _moveSpeed;
-                }
-                else
-                {
-                    return 0f;
-                }
-            }
-            else
-            {
-                return 0f;
-            }
-        }
-    }
-
-    public bool IsMoving 
-    {
-        get
-        {
-            return _isMoving;
-        }
-        private set
-        {
-            _isMoving = value;
-            _animator.SetBool(AnimationStrings.isMoving, value);
-        }
-    }
-
-    public bool IsFacingRight
-    {
-        get
-        {
-            return _isFacingRight;
-        }
-        private set
-        {
-            if (_isFacingRight != value)
-            {
-                transform.localScale *= new Vector2(-1, 1);
-            }
-
-            _isFacingRight = value;
-        }
-    }
-
-    public bool CanMove
-    {
-        get
-        {
-            return _animator.GetBool(AnimationStrings.canMove);
-        }
-    }
-
-    public bool LockVelocity
-    {
-        get
-        {
-            return _animator.GetBool(AnimationStrings.lockVelocity);
-        }
-    }
+    private Animator animator;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _animator = GetComponentInChildren<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
     {
-        if (!LockVelocity)
+        if (!LockVelocity())
         {
-            _rigidbody.linearVelocity = new Vector2(_moveInput.x * CurrentMoveSpeed,
-                                            _moveInput.y * CurrentMoveSpeed);
+            rigidBody.linearVelocity = new Vector2(moveInput.x * GetCurrentMoveSpeed(),
+                                            moveInput.y * GetCurrentMoveSpeed());
         }
-
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        _moveInput = context.ReadValue<Vector2>();
+        moveInput = context.ReadValue<Vector2>();
         
-        IsMoving = _moveInput != Vector2.zero;
+        SetIsMoving(moveInput != Vector2.zero);
 
-        if(_animator.GetBool(AnimationStrings.isAlive)) //fix changing directions on death?
-            SetFacingDirection(_moveInput);
+        if(animator.GetBool(AnimationStrings.isAlive)) //fix changing directions on death?
+        {
+            SetFacingDirection(moveInput);
+        }
     }
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (_moveInput.x > 0f && !IsFacingRight)
+        if (this.moveInput.x > 0f && !isFacingRight)
         {
-            IsFacingRight = true;
+            SetIsFacingRight(true);
         }
-        else if (_moveInput.x < 0f && IsFacingRight)
+        else if (this.moveInput.x < 0f && isFacingRight)
         {
-            IsFacingRight = false;
+            SetIsFacingRight(false);
         }
     }
 
@@ -124,21 +57,65 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            _animator.SetTrigger(AnimationStrings.attackTrigger);
+            animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
 
     public void OnHit(Vector2 knockback)
     {
-        if (IsFacingRight)
+        if (isFacingRight)
         {
-            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x - knockback.x,
-                                            _rigidbody.linearVelocity.y + knockback.y);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x - knockback.x,
+                                            rigidBody.linearVelocity.y + knockback.y);
         }
         else
         {
-            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x + knockback.x,
-                                            _rigidbody.linearVelocity.y + knockback.y);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x + knockback.x,
+                                            rigidBody.linearVelocity.y + knockback.y);
         }
+    }
+
+    private float GetCurrentMoveSpeed()
+    {
+        if (CanMove())
+        {
+            if (isMoving)
+            {
+                return moveSpeed;
+            }
+            else
+            {
+                return 0f;
+            }
+        }
+        else
+        {
+            return 0f;
+        }
+    }
+
+    private void SetIsMoving(bool value)
+    {
+        isMoving = value;
+        animator.SetBool(AnimationStrings.isMoving, value);
+    }
+
+    private void SetIsFacingRight(bool value)
+    {
+        if (isFacingRight != value)
+        {
+            transform.localScale *= new Vector2(-1, 1);
+        }
+        isFacingRight = value;
+    }
+
+    private bool CanMove()
+    {
+        return animator.GetBool(AnimationStrings.canMove);
+    }
+
+    private bool LockVelocity()
+    {
+        return animator.GetBool(AnimationStrings.lockVelocity);
     }
 }

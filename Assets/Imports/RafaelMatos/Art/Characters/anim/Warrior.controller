@@ -75,32 +75,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &-6659744236972321884
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: warrior single swing3
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 56a86df5ef5618f45a16d0b01326821d, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1107 &-6167844505329158913
 AnimatorStateMachine:
   serializedVersion: 6
@@ -110,12 +84,6 @@ AnimatorStateMachine:
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayerAttackStates
   m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: 6706706576659712259}
-    m_Position: {x: 280, y: 250, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -6659744236972321884}
-    m_Position: {x: 240, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6424144302933075539}
     m_Position: {x: 320, y: 110, z: 0}
@@ -223,11 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245db219e5d7b354b825fa8f028f2a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boolName: canMove
-  _updateOnStateMachine: 0
-  _updateOnState: 1
-  _valueOnEnter: 0
-  _valueOnExit: 0
+  boolName: canMove
+  updateOnStateMachine: 0
+  updateOnState: 1
+  valueOnEnter: 0
+  valueOnExit: 0
 --- !u!1102 &-832346847782351041
 AnimatorState:
   serializedVersion: 6
@@ -417,11 +385,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245db219e5d7b354b825fa8f028f2a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boolName: canMove
-  _updateOnStateMachine: 0
-  _updateOnState: 1
-  _valueOnEnter: 0
-  _valueOnExit: 1
+  boolName: canMove
+  updateOnStateMachine: 0
+  updateOnState: 1
+  valueOnEnter: 0
+  valueOnExit: 1
 --- !u!114 &4167559149081185305
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,11 +402,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245db219e5d7b354b825fa8f028f2a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boolName: canMove
-  _updateOnStateMachine: 1
-  _updateOnState: 0
-  _valueOnEnter: 0
-  _valueOnExit: 1
+  boolName: canMove
+  updateOnStateMachine: 1
+  updateOnState: 0
+  valueOnEnter: 0
+  valueOnExit: 1
 --- !u!1102 &5021261978725012323
 AnimatorState:
   serializedVersion: 6
@@ -511,32 +479,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 95f01c4125fd1304397dfd535c52ff52, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &6706706576659712259
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: warrior full combo atk
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 946183f001527134192495d20b417f0b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -633,8 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245db219e5d7b354b825fa8f028f2a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boolName: lockVelocity
-  _updateOnStateMachine: 0
-  _updateOnState: 1
-  _valueOnEnter: 1
-  _valueOnExit: 0
+  boolName: lockVelocity
+  updateOnStateMachine: 0
+  updateOnState: 1
+  valueOnEnter: 1
+  valueOnExit: 0

@@ -72,6 +72,11 @@ public class Damageable : MonoBehaviour
     {
         isAlive = false;
         animator.SetBool(AnimationStrings.isAlive, false);
+
+        if(this.gameObject.CompareTag("Player"))
+        {
+            FindFirstObjectByType<UiController>().OnPlayerDeath(); //not best way to do this?
+        }
     }
 
     private void UpdateHealthBar()

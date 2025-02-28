@@ -23,11 +23,11 @@ public class MapTransition : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            loadMap.gameObject.SetActive(true);
+            loadMap.SetActive(true);
             confiner.BoundingShape2D = mapBoundary;
             collision.gameObject.transform.position = 
                 playerSpawnPosition.position;
-            unloadMap.gameObject.SetActive(false);
+            unloadMap.SetActive(false);
         }
     }
 }

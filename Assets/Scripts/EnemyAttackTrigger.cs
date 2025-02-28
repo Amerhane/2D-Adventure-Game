@@ -2,46 +2,46 @@ using UnityEngine;
 
 public class EnemyAttackTrigger : MonoBehaviour
 {
-    private EnemyController _parentController;
+    private EnemyController parentController;
     [SerializeField, Min(1)]
-    private float _attackCooldown = 1f;
-    private float _timeSinceAttack = 0f;
-    private bool _canAttack = true;
+    private float attackCooldown = 1f;
+    private float timeSinceAttack = 0f;
+    private bool canAttack = true;
 
     private void Start()
     {
-        _parentController = GetComponentInParent<EnemyController>();
+        parentController = GetComponentInParent<EnemyController>();
     }
 
     private void Update()
     {
-        if (!_canAttack)
+        if (!canAttack)
         {
-            _timeSinceAttack += Time.deltaTime;
+            timeSinceAttack += Time.deltaTime;
             
-            if (_timeSinceAttack >= _attackCooldown)
+            if (timeSinceAttack >= attackCooldown)
             {
-                _canAttack = true;
-                _timeSinceAttack = 0f;
+                canAttack = true;
+                timeSinceAttack = 0f;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && _canAttack)
+        if (collision.gameObject.CompareTag("Player") && canAttack)
         {
-            _parentController.Animator.SetTrigger(AnimationStrings.attackTrigger);
-            _canAttack = false;
+            parentController.GetAnimator().SetTrigger(AnimationStrings.attackTrigger);
+            canAttack = false;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && _canAttack)
+        if (collision.gameObject.CompareTag("Player") && canAttack)
         {
-            _parentController.Animator.SetTrigger(AnimationStrings.attackTrigger);
-            _canAttack = false;
+            parentController.GetAnimator().SetTrigger(AnimationStrings.attackTrigger);
+            canAttack = false;
         }
     }
 }

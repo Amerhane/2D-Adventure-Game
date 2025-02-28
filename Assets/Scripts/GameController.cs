@@ -11,16 +11,11 @@ public class GameController : MonoBehaviour
 
     public void PickUpCoin()
     {
-        AddCoin();
+        coins++;
     }
 
     public int GetCoins()
     {
         return coins;
-    }
-
-    private void AddCoin()
-    {
-        coins++;
     }
 }
