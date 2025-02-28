@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     private bool isFacingRight = true;
     private Vector2 moveDirection;
 
+    [SerializeField]
+    private bool boss = false;
+
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -92,8 +95,10 @@ public class EnemyController : MonoBehaviour
 
     public void Kill()
     {
-        GetComponent<DropItemOnDeath>().DropOnDeath();
-
+        if (!boss)
+        {
+            GetComponent<DropItemOnDeath>().DropOnDeath();
+        }
         Destroy(this.gameObject);
     }
 

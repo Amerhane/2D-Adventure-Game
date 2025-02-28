@@ -20,7 +20,7 @@ public class BossMapTransition : MapTransition
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (gameController.GetCoins() >= 0)
+            if (gameController.GetCoins() >= 10)
             {
                 loadMap.SetActive(true);
                 collision.gameObject.transform.position =
